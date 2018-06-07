@@ -6,3 +6,9 @@ export const addPost = (userName, title, text) => ({
     text
 })
 
+export const addComment = (userName, text) => ({
+    type: "ADD_COMMENT",
+    userName,
+    text
+})
+

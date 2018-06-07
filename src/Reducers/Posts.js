@@ -1,7 +1,7 @@
 
 
 const posts = (state = [], action) => {
-    if (action.type) {
+    if (action.type === 'ADD_POST') {
         return  [
             ...state,
             {
