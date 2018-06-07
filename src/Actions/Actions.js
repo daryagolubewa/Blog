@@ -1,9 +1,11 @@
 
-export const addPost = (userName, title, text) => ({
+export const addPost = (userName, title, text, likesNumber) => ({
     type: 'ADD_POST',
     userName,
     title,
-    text
+    text,
+    likesNumber
+
 })
 
 export const addComment = (userName, text) => ({
@@ -12,7 +14,6 @@ export const addComment = (userName, text) => ({
     text
 })
 
-export const Likes = (number) => ({
+export const Likes = () => ({
     type: 'ADD_LIKE',
-    number
 })

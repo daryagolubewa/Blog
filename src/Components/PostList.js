@@ -4,16 +4,18 @@ import Post from '../Components/Post'
 
 const PostList = ({ posts }) => (
     <div>
-        {posts.map(post =>
-            <Post
-                {...post}
-            />
+        {
+            posts.map(post => {
+                debugger
+                return <Post
+                    {...post}
+                />}
         )}
     </div>
 )
 
-PostList.propTypes = {
+/*PostList.propTypes = {
 
-}
+}*/
 
 export default PostList

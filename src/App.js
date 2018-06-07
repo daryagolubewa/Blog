@@ -1,12 +1,13 @@
 import React from "react";
 import AddPost from './Containers/FormPost'
-import addedPostList from './Containers/addedPostList'
+import AddedPostList from './Containers/AddedPostList'
 
 
 
 const App = () => (
     <div>
         <AddPost />
+        <AddedPostList />
     </div>
 )
 
