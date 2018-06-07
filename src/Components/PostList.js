@@ -15,3 +15,5 @@ const PostList = ({ posts }) => (
 PostList.propTypes = {
 
 }
+
+export default PostList

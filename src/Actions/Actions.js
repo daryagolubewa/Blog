@@ -12,3 +12,7 @@ export const addComment = (userName, text) => ({
     text
 })
 
+export const Likes = (number) => ({
+    type: 'ADD_LIKE',
+    number
+})
