@@ -1,12 +1,18 @@
-import addPost from '../Actions/Actions'
 
-const initialState = {
-    posts: []
-}
 
-function blogApp(state, action) {
-    if (typeof state === "undefined") {
-        return initialState
+const posts = (state = [], action) => {
+    if (action.type) {
+        return  [
+            ...state,
+            {
+                userName: action.userName,
+                title: action.title,
+                text: action.text
+            }
+        ]
     }
     return state
 }
+
+
+export default posts;
