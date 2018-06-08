@@ -7,7 +7,10 @@ const posts = (state = [], action) => {
             {
                 userName: action.userName,
                 title: action.title,
-                text: action.text
+                text: action.text,
+                likesNumber: action.likesNumber,
+                likesNumberId: action.likesNumberId
+
             }
         ]
     }
