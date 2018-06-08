@@ -9,7 +9,7 @@ const posts = (state = [], action) => {
                 title: action.title,
                 text: action.text,
                 likesNumber: action.likesNumber,
-                likesNumberId: action.likesNumberId
+                id: action.id
 
             }
         ]
