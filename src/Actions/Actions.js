@@ -20,5 +20,10 @@ export const addComment = (userName, text) => ({
 export const Like = (id) => ({
     type: 'ADD_LIKE',
     id
-
 })
+
+export const Dislike = (id) => ({
+     type: 'ADD_DISLIKE',
+     id
+    }
+)
