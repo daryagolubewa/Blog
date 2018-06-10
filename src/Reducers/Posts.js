@@ -1,7 +1,8 @@
 
 
 const posts = (state = [], action) => {
-    if (action.type === 'ADD_POST') {
+    switch (action.type) {
+        case 'ADD_POST':
         return  [
             ...state,
             {
@@ -13,8 +14,18 @@ const posts = (state = [], action) => {
 
             }
         ]
+        case 'ADD_LIKE':
+            return state.map(post =>
+                (post.id === action.id)
+                ? {...post, likeNumbers: post.likeNumbers + 1} : post
+            )
+
     }
     return state
 }
 
 export default posts;
+
+
+
+
