@@ -14,10 +14,15 @@ const posts = (state = [], action) => {
 
             }
         ]
-        case 'ADD_LIKE':
+        case 'LIKE':
             return state.map(post =>
                 (post.id === action.id)
-                ? {...post, likeNumbers: post.likeNumbers + 1} : post
+                ? {...post, likesNumber: post.likesNumber + 1} : post
+            )
+        case 'DISLIKE':
+            return state.map(post =>
+                (post.id === action.id)
+            ? {...post, likesNumber: post.likesNumber - 1} : post
             )
 
     }

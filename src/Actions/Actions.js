@@ -18,12 +18,12 @@ export const addComment = (userName, text) => ({
 
 
 export const Like = (id) => ({
-    type: 'ADD_LIKE',
+    type: 'LIKE',
     id
 })
 
 export const Dislike = (id) => ({
-     type: 'ADD_DISLIKE',
+     type: 'DISLIKE',
      id
     }
 )
