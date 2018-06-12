@@ -24,6 +24,14 @@ const posts = (state = [], action) => {
                 (post.id === action.id)
             ? {...post, likesNumber: post.likesNumber - 1} : post
             )
+        case 'ADD_COMMENT':
+            return [
+                ...state, {
+                    userName: action.userName,
+                    text: action.text,
+                    id: action.id
+                }
+            ]
 
     }
     return state

@@ -10,10 +10,12 @@ export const addPost = (userName, title, text) => ({
 
 })
 
+let commentIt = 0;
 export const addComment = (userName, text) => ({
     type: "ADD_COMMENT",
     userName,
-    text
+    text,
+    id: commentId++
 })
 
 

@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Like from '../Actions/Actions'
-import Post from '../Actions/Actions'
+
 
 const LikeButtons = ({likeButton, likesNumber, dislikeButton}) => (
 <div>
@@ -13,10 +12,10 @@ const LikeButtons = ({likeButton, likesNumber, dislikeButton}) => (
 
 
 
-LikeButtons.PropTypes = {
+LikeButtons.propTypes = {
     likeButton: PropTypes.func.isRequired,
     likesNumber: PropTypes.number.isRequired,
-    dislikesButton: PropTypes.func.isRequired
+    dislikeButton: PropTypes.func.isRequired
 }
 
 export default LikeButtons
