@@ -3,9 +3,9 @@ import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import App from './App';
-import posts from './Reducers/index'
+import combineReducers from './Reducers/index'
 
-const store = createStore(posts)
+const store = createStore(combineReducers)
 
 render(
     <Provider store={store}>

@@ -19,3 +19,5 @@ LikeButtons.propTypes = {
 }
 
 export default LikeButtons
+
+//смотрите, кнопки

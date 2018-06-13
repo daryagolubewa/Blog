@@ -10,7 +10,8 @@ const posts = (state = [], action) => {
                 title: action.title,
                 text: action.text,
                 likesNumber: action.likesNumber,
-                id: action.id
+                id: action.id,
+                comments: []
 
             }
         ]
@@ -25,19 +26,21 @@ const posts = (state = [], action) => {
             ? {...post, likesNumber: post.likesNumber - 1} : post
             )
         case 'ADD_COMMENT':
-            return [
-                ...state, {
-                    userName: action.userName,
-                    text: action.text,
-                    id: action.id
-                }
-            ]
-
+            return state.map(post =>
+                (post.id === action.postId)
+                    ? {...post, comments: [...post.comments, {
+                        userName: action.userName,
+                        text: action.text,
+                        id: action.id
+                    }]}
+                    : post
+            )
     }
     return state
 }
 
 export default posts;
+
 
 
 

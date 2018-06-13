@@ -1,19 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Post from '../Components/Post'
-import addPost from '../Actions/Actions'
 
-const PostList = ({ posts, Like, Dislike }) => (
+
+const PostList = ({posts, Like, Dislike}) => (
     <div>
         {posts.map(post =>
             <Post
-                    key={post.id}
-                    {...post}
+                key={post.id}
+                {...post}
                 likeButton={() => Like(post.id)}
-                    dislikeButton={() => Dislike(post.id)}
+                dislikeButton={() => Dislike(post.id)}
 
-                />
+            />
         )}
+
     </div>
 )
 
@@ -23,3 +24,5 @@ const PostList = ({ posts, Like, Dislike }) => (
 }*/
 
 export default PostList
+
+//тут типа все посты, которые есть
