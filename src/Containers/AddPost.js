@@ -8,7 +8,7 @@ const AddPost = ({ dispatch }) => {
     return(
         <Row>
             <Col md={4}>
-                <Panel>
+                <Panel bsStyle='primary'>
                     <Panel.Body>
                         <Form horizontal
                               onSubmit={e => {

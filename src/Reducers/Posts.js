@@ -1,6 +1,16 @@
 
 
-const posts = (state = [], action) => {
+const posts = (state = [{
+    title: 'Что-то грядёт',
+    userName: 'Пафнутий Иванович',
+    text: 'Здесь должны быть умные мысли. Но умных мыслей пока в голову не пришло. Пойду поем.',
+    likesNumber: 5,
+    id: 0,
+    comments: [ { userName: 'Василий Петрович',
+        text: 'Как тонко и необычно, сударь мой!',
+        id: 0
+    }]
+}], action) => {
     switch (action.type) {
         case 'ADD_POST':
         return  [

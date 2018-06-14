@@ -6,7 +6,7 @@ import { Grid, Row, Col, Panel, ListGroup, ListGroupItem } from 'react-bootstrap
 
 const Post = ({id, title, userName, text, likeButton, likesNumber, dislikeButton, comments}) => (
         <div>
-        <Panel bsStyle='success'>
+        <Panel bsStyle='primary'>
             <Panel.Heading>
                 <Panel.Title componentClass="h3"> {title} </Panel.Title>
             </Panel.Heading>
