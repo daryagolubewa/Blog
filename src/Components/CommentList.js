@@ -5,12 +5,13 @@ import AddComment from '../Containers/AddComment'
 
 const CommentList = ({ comments, postId }) => (
     <div>
-        {comments.map(comment =>
-            <Comment
-                key={comment.id}
-                {...comment}
-            />
-        )}
+        {
+            comments.map(comment =>
+                <Comment
+                    key={comment.id}
+                    {...comment}
+                />
+            )}
         <AddComment postId={postId} />
     </div>
 )

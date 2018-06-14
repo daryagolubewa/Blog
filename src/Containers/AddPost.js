@@ -4,7 +4,7 @@ import { addPost } from "../Actions/Actions"
 import { FormControl, Button, FormGroup, Form, Row, Col, Panel } from 'react-bootstrap'
 
 const AddPost = ({ dispatch }) => {
-    let userName, title, text
+    let title, userName, text
     return(
         <Row>
             <Col md={4}>
@@ -13,28 +13,28 @@ const AddPost = ({ dispatch }) => {
                         <Form horizontal
                               onSubmit={e => {
                                   e.preventDefault()
-                                  if (!userName.value.trim() || !title.value.trim() || !text.value.trim()) {
+                                  if (!title.value.trim() || !userName.value.trim() || !text.value.trim()) {
                                       return
                                   }
 
-                                  dispatch(addPost(userName.value, title.value, text.value))
-                                  userName.value = '';
+                                  dispatch(addPost(title.value, userName.value, text.value))
                                   title.value = '';
+                                  userName.value = '';
                                   text.value = '';
                               }}
                         >
 
                             <h3>Написать пост</h3>
                             <FormGroup>
-                                <FormControl type='text' inputRef={node => userName = node} placeholder="Введите имя"/>
+                                <FormControl type='text' inputRef={node => userName = node} placeholder="Введите заголовок"/>
                             </FormGroup>
 
                             <FormGroup>
-                                <FormControl type='text' inputRef={node => title = node} placeholder="Введите заголовок"/>
+                                <FormControl type='text' inputRef={node => title = node} placeholder="Введите имя"/>
                             </FormGroup>
 
                             <FormGroup>
-                                <FormControl type='textarea' inputRef={node => text = node} placeholder="Введите текст"/>
+                                <FormControl componentClass="textarea"  type='textarea' inputRef={node => text = node} placeholder="Введите текст"/>
                             </FormGroup>
                             <FormGroup>
                                 <Button type="submit">

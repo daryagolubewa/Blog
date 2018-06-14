@@ -6,8 +6,8 @@ const posts = (state = [], action) => {
         return  [
             ...state,
             {
-                userName: action.userName,
                 title: action.title,
+                userName: action.userName,
                 text: action.text,
                 likesNumber: action.likesNumber,
                 id: action.id,

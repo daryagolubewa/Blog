@@ -1,13 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Button, ButtonGroup, ButtonToolbar, Row, Col, Glyphicon} from 'react-bootstrap'
 
 
 const LikeButtons = ({likeButton, likesNumber, dislikeButton}) => (
-<div>
-    <button onClick={likeButton}> + </button>
-    <p>{likesNumber}</p>
-    <button onClick={dislikeButton}> - </button>
-</div>
+    <ButtonGroup bsSize='small'>
+        <Button onClick={likeButton}>
+            <Glyphicon glyph='star'/> + </Button>
+        <Button>{likesNumber}</Button>
+        <Button onClick={dislikeButton}>
+            <Glyphicon glyph='star'/> - </Button>
+    </ButtonGroup>
 )
 
 

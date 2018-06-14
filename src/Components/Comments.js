@@ -1,10 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {Panel, Row, Col} from 'react-bootstrap'
 
 const Comment = ({userName, text}) => (
     <div>
-        <p> {userName} </p>
-        <p> {text} </p>
+        <Row>
+            <Col md={8}>
+                <Panel bsStyle='success'>
+                    <Panel.Heading> {userName} </Panel.Heading>
+                    <Panel.Body> {text} </Panel.Body>
+                </Panel>
+            </Col>
+        </Row>
     </div>
 )
 
@@ -16,3 +23,4 @@ Comment.propTypes = {
 export default Comment
 
 //якобы показывает комменты
+
