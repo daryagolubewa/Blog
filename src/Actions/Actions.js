@@ -6,7 +6,7 @@ export const addPost = (userName, title, text) => ({
     title,
     text,
     likesNumber: 0,
-    id: postId++
+    id: ++postId
 
 })
 
@@ -16,7 +16,7 @@ export const addComment = (userName, text, postId) => ({
     userName,
     text,
     postId,
-    id: commentId++
+    id: ++commentId
 })
 
 
